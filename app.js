@@ -67,6 +67,18 @@ chi ha vinto.
 */
 
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+  
+
+  function somma(num1,num2){
+    const som = num1+num2;
+    return som;
+  }
+
 const tdNmeroUtente = document.getElementById("numero");
 const tdSceltaUtente = document.getElementById("scelta");
 
@@ -74,8 +86,34 @@ const button = document.getElementById("invia");
 
 button.addEventListener("click", function(){
     const numeroUtente = parseInt(tdNmeroUtente.value);
-const  sceltaUtente = tdSceltaUtente.value;
+    const  sceltaUtente = tdSceltaUtente.value;
+    
 
-console.log(numeroUtente,sceltaUtente);
-})
+    while(numeroUtente>5){
+        alert("Inserisci di nuvo il numero, deve essere tra 1 e 5");
+        break
+    } 
+
+    if(numeroUtente<=5){
+        console.log(numeroUtente,sceltaUtente);
+
+        const numeroPc = getRandomInt(1,6);
+    
+        console.log(numeroPc);
+    
+        const totaleNUmeri = somma(numeroUtente,numeroPc);
+        console.log(totaleNUmeri);
+    }
+
+    
+});
+
+
+
+
+
+
+
+
+
 

@@ -17,7 +17,7 @@ function palindroma (array){
         if(array[i]==array[j]){
             controllo = true;
         }else{
-            console = false;
+            controllo = false;
             break;
         }
         j--;
@@ -33,6 +33,14 @@ console.log(parola, arrayParola);
 const risposta = palindroma (arrayParola);
 
 console.log(risposta);
+
+if (risposta==true){
+    console.log("la parola è palindroma");
+} else {
+    console.log("la parola non è palindroma");
+}
+
+
 
 
 

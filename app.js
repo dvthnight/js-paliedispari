@@ -79,6 +79,25 @@ function getRandomInt(min, max) {
     return som;
   }
 
+  function pariodispari(val){
+      let risultato;
+      if (val%2 == 0){
+          risultato = 0;
+      }else{
+          risultato = 1;
+      }
+
+      return risultato;
+  }
+
+  function risultato(ris,scelta){
+      if(ris == scelta){
+          console.log("Hai vinto!!!!")
+      }else{
+          console.log("Hai perso!!!!!")
+      }
+  }
+
 const tdNmeroUtente = document.getElementById("numero");
 const tdSceltaUtente = document.getElementById("scelta");
 
@@ -86,13 +105,8 @@ const button = document.getElementById("invia");
 
 button.addEventListener("click", function(){
     const numeroUtente = parseInt(tdNmeroUtente.value);
-    const  sceltaUtente = tdSceltaUtente.value;
+    const sceltaUtente = tdSceltaUtente.value;
     
-
-    while(numeroUtente>5){
-        alert("Inserisci di nuvo il numero, deve essere tra 1 e 5");
-        break
-    } 
 
     if(numeroUtente<=5){
         console.log(numeroUtente,sceltaUtente);
@@ -101,10 +115,16 @@ button.addEventListener("click", function(){
     
         console.log(numeroPc);
     
-        const totaleNUmeri = somma(numeroUtente,numeroPc);
-        console.log(totaleNUmeri);
+        const totale = somma(numeroUtente,numeroPc);
+        console.log(totale);
+        const probabilità = pariodispari(totale);
+
+        console.log(probabilità);
+
+        const vincitore = risultato(probabilità, sceltaUtente);
     }
 
+        
     
 });
 

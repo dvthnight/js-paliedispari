@@ -1,44 +1,44 @@
-/*
-Palidroma
-Chiedere all’utente di inserire una parola 
-Creare una funzione per capire se la parola inserita
-è palindroma
-*/
+// /*
+// Palidroma
+// Chiedere all’utente di inserire una parola 
+// Creare una funzione per capire se la parola inserita
+// è palindroma
+// */
 
-function palindroma (array){
+// function palindroma (array){
 
-    let meta = Math.floor(array.length/2);
-    console.log(array, array.length,meta);
-    let j= array.length-1;
-    let controllo;
+//     let meta = Math.floor(array.length/2);
+//     console.log(array, array.length,meta);
+//     let j= array.length-1;
+//     let controllo;
 
-    for(let i=0; i<meta; i++){
-        console.log(array[i], array[j])
-        if(array[i]==array[j]){
-            controllo = true;
-        }else{
-            controllo = false;
-            break;
-        }
-        j--;
-    }
+//     for(let i=0; i<meta; i++){
+//         console.log(array[i], array[j])
+//         if(array[i]==array[j]){
+//             controllo = true;
+//         }else{
+//             controllo = false;
+//             break;
+//         }
+//         j--;
+//     }
 
-    return controllo;
-}
+//     return controllo;
+// }
 
-const parola = prompt("inserisci una parola");
-const arrayParola = [...parola];
-console.log(parola, arrayParola);
+// // const parola = prompt("inserisci una parola");
+// const arrayParola = [...parola];
+// console.log(parola, arrayParola);
 
-const risposta = palindroma (arrayParola);
+// const risposta = palindroma (arrayParola);
 
-console.log(risposta);
+// console.log(risposta);
 
-if (risposta==true){
-    console.log("la parola è palindroma");
-} else {
-    console.log("la parola non è palindroma");
-}
+// if (risposta==true){
+//     console.log("la parola è palindroma");
+// } else {
+//     console.log("la parola non è palindroma");
+// }
 
 
 
@@ -66,4 +66,16 @@ Sommiamo i due numeri Stabiliamo se la somma dei due numeri
 chi ha vinto.
 */
 
+
+const tdNmeroUtente = document.getElementById("numero");
+const tdSceltaUtente = document.getElementById("scelta");
+
+const button = document.getElementById("invia");
+
+button.addEventListener("click", function(){
+    const numeroUtente = parseInt(tdNmeroUtente.value);
+const  sceltaUtente = tdSceltaUtente.value;
+
+console.log(numeroUtente,sceltaUtente);
+})
 
